@@ -20,7 +20,7 @@ def gradiant_decent(x,y,m,w,b):
     return df_dm, df_db
 
 my_need = ['LotArea', 'SalePrice']
-df = pd.read_csv('train.csv', usecols=my_need)
+df = pd.read_csv('train_linear_reg.csv', usecols=my_need)
 #print(df)
 x_train = np.array(df['LotArea'], dtype=float)
 y_train = np.array(df['SalePrice'], dtype=float)
@@ -71,5 +71,6 @@ for i in range(1000):
 #plt.title("iterations vs cost_fn")
 #plt.grid(True)
 #plt.show()
+
 
 
