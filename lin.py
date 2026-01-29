@@ -72,5 +72,16 @@ for i in range(1000):
 #plt.grid(True)
 #plt.show()
 
+y_test=[]
+df1 = pd.read_csv('test.csv', usecols=['Id','LotArea'])
+x_test = np.array(df1['LotArea'], dtype = float)
+for x in x_test:
+    y_test.append((w*x)+b)
+df_ans = pd.DataFrame(df1['Id'], y_test)
+file_name = 'ans.csv'
+df_ans.to_csv(file_name, index=False)
+
+
+
 
 
